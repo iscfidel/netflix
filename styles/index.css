@@ -149,14 +149,14 @@ body {
     text-align: center;
 }
 
-.main-content .email-input {
+.main-content .validations-input {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
 
-.email-input {
+.validations-input {
     position: relative;
     margin-bottom: 1rem;
     width: 100%;
@@ -165,7 +165,7 @@ body {
     margin-right: auto;
 }
 
-.email-input input {
+.validations-input input {
     border: 2px solid rgb(156, 156, 156);
     padding: 1.2rem 1rem 0.6rem 1rem;
     width: 100%;
@@ -177,7 +177,7 @@ body {
     transition: border-color 0.2s;
 }
 
-.email-input label {
+.validations-input label {
     position: absolute;
     left: 1rem;
     top: 1.2rem;
@@ -190,8 +190,8 @@ body {
     z-index: 1;
 }
 
-.email-input input:focus+label,
-.email-input input:not(:placeholder-shown)+label {
+.validations-input input:focus+label,
+.validations-input input:not(:placeholder-shown)+label {
     top: -0.5rem;
     left: 0.7rem;
     font-size: 0.75rem;
@@ -200,22 +200,22 @@ body {
     padding: 0 0.25rem;
 }
 
-.email-input input:focus {
+.validations-input input:focus {
     border: 2px solid rgb(255, 255, 255);
     outline: none;
 }
 
 @media (max-width: 600px) {
-    .email-input {
+    .validations-input {
         max-width: 95%;
     }
 
-    .email-input input {
+    .validations-input input {
         font-size: 0.95rem;
         padding: 1rem 0.8rem 0.5rem 0.8rem;
     }
 
-    .email-input label {
+    .validations-input label {
         left: 0.8rem;
         top: 1rem;
         font-size: 0.95rem;

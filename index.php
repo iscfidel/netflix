@@ -41,14 +41,26 @@ YAZ TUNG TUNG SAHUR        </p>
         <p class="text">
             ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu </br>membresía de Netflix.
         </p>
-        <div class="email-input">
+        <div class="validations-input">
             <input type="email" id="validations" placeholder=" " required>
             <label for="validations">Email</label>
             <button class="start-button">Comenzar</button>
         </div>
     </div>
     <div class="modal-login">
-
+            <span class="close-button">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <div class="validations-input">
+                    <input type="email" id="validations" placeholder=" " required>
+                    <label for="validations">Email</label>
+                </div>
+                <div class="validations-input">
+                    <input type="password" id="validations" placeholder=" " required>
+                    <label for="validations">Contraseña</label>
+                </div>
+                <button type="submit" class="start-button">Iniciar Sesión</button>
+            </form>
     </div>
 </body>
 
