@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    background-image: url("../img/background-ntfx.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Negro con opacidad del 50% */
+    padding: 10px 10px 10px 10px;
+    overflow: auto;
+    margin-bottom: 100px;
+}
+
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+.navbar .loginButton {
+    float: right;
+    background-color: #e50914;
+    /* Rojo Netflix */
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar .home {
+    color: #e50914;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar .home .netflix-logo {
+    background: linear-gradient(135deg, #e50914 0%, #ff1744 50%, #e50914 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    font-weight: 900;
+    display: inline-block;
+}
+
+.navbar .home:hover .netflix-logo {
+    text-shadow: 0 0 30px rgba(229, 9, 20, 0.8);
+    transform: scale(1.02);
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropButton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 10%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+.main-content .main-text {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    /* Ajusta el espaciado para simular Netflix Sans */
+    padding: 20px;
+    color: white;
+    font-size: 55px;
+    text-align: center;
+}
+
+.main-content .sub-text {
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    /* Ajusta el espaciado para simular Netflix Sans */
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.main-content .text {
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    /* Ajusta el espaciado para simular Netflix Sans */
+    padding: 20px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.main-content .email-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.email-input {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.email-input input {
+    border: 2px solid rgb(156, 156, 156);
+    padding: 1.2rem 1rem 0.6rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #222;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.email-input label {
+    position: absolute;
+    left: 1rem;
+    top: 1.2rem;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 0.25rem;
+    font-size: 1rem;
+    z-index: 1;
+}
+
+.email-input input:focus+label,
+.email-input input:not(:placeholder-shown)+label {
+    top: -0.5rem;
+    left: 0.7rem;
+    font-size: 0.75rem;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 0.25rem;
+}
+
+.email-input input:focus {
+    border: 2px solid rgb(255, 255, 255);
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .email-input {
+        max-width: 95%;
+    }
+
+    .email-input input {
+        font-size: 0.95rem;
+        padding: 1rem 0.8rem 0.5rem 0.8rem;
+    }
+
+    .email-input label {
+        left: 0.8rem;
+        top: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+.start-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background-color 0.2s;
+}
+
+.start-button:hover {
+    background-color: #b8070f;
+}
