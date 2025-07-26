@@ -9,27 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/navbar.css">
     <title>Netflix</title>
 </head>
 
 <body>
-    <div class="navbar">
-        <a class="home" href="#">
-            <span class="netflix-logo">NETFLIX</span>
-        </a>
-        <button class="loginButton">Iniciar Sesion</button>
-        <div class="dropdown">
-            <button class="dropButton">Idioma
-                <i class="fa fa-caret-down">
-                </i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Español</a>
-                <a href="#">English</a>
-                <a href="#">Français</a>
-            </div>
-        </div>
-    </div>
+    <?php include "components/navbar.php"; ?>
     <div class="main-content">
         <p class="main-text">
             Películas y series</br>
@@ -37,31 +22,18 @@
             más
         </p>
         <p class="sub-text">
-YAZ TUNG TUNG SAHUR        </p>
+            A partir de $119. Cancela cuando quieras.
+        </p>
         <p class="text">
             ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu </br>membresía de Netflix.
         </p>
         <div class="validations-input">
             <input type="email" id="validations" placeholder=" " required>
             <label for="validations">Email</label>
-            <button class="start-button">Comenzar</button>
+            <button class="start-button">
+                <a href="views/login.php">Comenzar</a>
+            </button>
         </div>
     </div>
-    <div class="modal-login">
-            <span class="close-button">&times;</span>
-            <h2>Iniciar Sesión</h2>
-            <form>
-                <div class="validations-input">
-                    <input type="email" id="validations" placeholder=" " required>
-                    <label for="validations">Email</label>
-                </div>
-                <div class="validations-input">
-                    <input type="password" id="validations" placeholder=" " required>
-                    <label for="validations">Contraseña</label>
-                </div>
-                <button type="submit" class="start-button">Iniciar Sesión</button>
-            </form>
-    </div>
 </body>
-
 </html>
